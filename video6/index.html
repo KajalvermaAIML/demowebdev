@@ -13,8 +13,9 @@
         }
 
         body {
-            background-color: #F4C2C2; /* Baby Pink */
-            color: #1e293b;
+            background-color: #D4AF37; /* Metallic Golden */
+            background-image: radial-gradient(circle at 50% 30%, #F5E086 0%, #D4AF37 50%, #AA7A1E 100%);
+            color: #1a1a1a;
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -23,25 +24,26 @@
         }
 
         .form-container {
-            background: rgba(255, 255, 255, 0.85);
+            background: rgba(255, 255, 255, 0.88);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.9);
+            border: 2px solid rgba(212, 175, 55, 0.6);
             border-radius: 20px;
             padding: 2.5rem;
             max-width: 550px;
             width: 100%;
-            box-shadow: 0 20px 40px rgba(225, 112, 140, 0.2);
+            box-shadow: 0 20px 45px rgba(146, 107, 13, 0.35);
         }
 
         h1 {
             font-size: 1.45rem;
-            font-weight: 700;
+            font-weight: 800;
             margin-bottom: 1.5rem;
             text-align: center;
             letter-spacing: 0.5px;
             line-height: 1.4;
-            color: #db2777; /* Deep Pink Header */
+            color: #855806; /* Deep Gold / Bronze */
+            text-transform: uppercase;
         }
 
         .form-group {
@@ -53,24 +55,24 @@
             margin-bottom: 0.4rem;
             font-size: 0.95rem;
             font-weight: 600;
-            color: #334155;
+            color: #333333;
         }
 
         input[type="text"], textarea, select {
             width: 100%;
             padding: 0.75rem 1rem;
             border-radius: 10px;
-            border: 1.5px solid #f9a8d4;
+            border: 1.5px solid #d4af37;
             background: #ffffff;
-            color: #1e293b;
+            color: #1a1a1a;
             font-size: 0.95rem;
             outline: none;
             transition: all 0.2s ease;
         }
 
         input[type="text"]:focus, textarea:focus, select:focus {
-            border-color: #ec4899;
-            box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.2);
+            border-color: #b8860b;
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.3);
         }
 
         .radio-group, .checkbox-group {
@@ -84,11 +86,11 @@
             display: inline;
             margin-bottom: 0;
             cursor: pointer;
-            color: #475569;
+            color: #444444;
         }
 
         input[type="radio"], input[type="checkbox"] {
-            accent-color: #ec4899;
+            accent-color: #b8860b;
             cursor: pointer;
             width: 16px;
             height: 16px;
@@ -96,7 +98,7 @@
 
         select option {
             background: #ffffff;
-            color: #1e293b;
+            color: #1a1a1a;
         }
     </style>
 </head>
