@@ -4,37 +4,141 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forms - Lets learn it | Video 6</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #2E5090; /* YInMn Blue */
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .form-container {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 16px;
+            padding: 2.5rem;
+            max-width: 550px;
+            width: 100%;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            letter-spacing: 0.5px;
+            line-height: 1.4;
+            color: #f8fafc;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.4rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #e2e8f0;
+        }
+
+        input[type="text"], textarea, select {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            background: rgba(15, 23, 42, 0.6);
+            color: #ffffff;
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        input[type="text"]:focus, textarea:focus, select:focus {
+            border-color: #93c5fd;
+            box-shadow: 0 0 0 3px rgba(147, 197, 253, 0.3);
+        }
+
+        .radio-group, .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-top: 0.5rem;
+        }
+
+        .radio-group label, .checkbox-group label {
+            display: inline;
+            margin-bottom: 0;
+            cursor: pointer;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            accent-color: #60a5fa;
+            cursor: pointer;
+            width: 16px;
+            height: 16px;
+        }
+
+        select option {
+            background: #1e293b;
+            color: #ffffff;
+        }
+    </style>
 </head>
 <body>
-    <h1> TELL ME ABOUT YOURSELF... ARE YOU AN ALIEN...</h1>
-    <form action="post">
-        <div>
-            <label for="username"> Enter your Name</label>
-            <input type="text" id="username" name="username" placeholder="Enter your username">
-        </div>
-        <div>
-            <input type="radio" id="male" name="gender" value="male">
-            <label for="male">Male</label>
-            <input type="radio" id="female" name="gender" value="female">
-            <label for="female">Female</label>
-        </div>
+    <div class="form-container">
+        <h1>TELL ME ABOUT YOURSELF... ARE YOU AN ALIEN...</h1>
+        <form action="post">
+            <div class="form-group">
+                <label for="username">Enter your Name</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username">
+            </div>
 
-        <div>
-            <input type="checkbox" id="subscribe" name="subscribe" value="yes">
-            <label for="subscribe">I AM A STUPID YAYY!!! </label>
-        </div>
-        <div>
-            <label for="comment"> Enter your Comment </label>
-            <textarea id="comment" name="comment" rows="4" cols="50"></textarea>
-        </div>
+            <div class="form-group">
+                <label>Select Gender</label>
+                <div class="radio-group">
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </div>
+            </div>
 
-        <div>
-            <select name="nicknames">
-                <option value="IDIOT">IDIOT</option>
-                <option value="SUAR">SUAR</option>
-                <option value="NASHEDI">NASHEDI</option>
-            </select>
-        </div>
-    </form>
+            <div class="form-group">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+                    <label for="subscribe">I AM A STUPID YAYY!!!</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="comment">Enter your Comment</label>
+                <textarea id="comment" name="comment" rows="4" placeholder="Type your thoughts..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="nicknames">Select Nickname</label>
+                <select id="nicknames" name="nicknames">
+                    <option value="IDIOT">IDIOT</option>
+                    <option value="SUAR">SUAR</option>
+                    <option value="NASHEDI">NASHEDI</option>
+                </select>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
