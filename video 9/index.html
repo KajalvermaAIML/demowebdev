@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Id and Classes in HTML - Sigma Web Dev Video 9</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0f172a;
+            color: #e2e8f0;
+            padding: 2rem;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #1e293b;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+            border: 1px solid #334155;
+        }
+
+        h1 {
+            color: #38bdf8;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #334155;
+            padding-bottom: 0.5rem;
+        }
+
+        /* Class Selector Examples */
+        .card {
+            background-color: #0f172a;
+            padding: 1.25rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border-left: 4px solid #38bdf8;
+        }
+
+        .highlight {
+            background-color: #3b82f6;
+            color: #ffffff;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .badge-success {
+            background: rgba(34, 197, 94, 0.2);
+            color: #4ade80;
+            border: 1px solid rgba(34, 197, 94, 0.4);
+        }
+
+        .badge-warning {
+            background: rgba(234, 179, 8, 0.2);
+            color: #facc15;
+            border: 1px solid rgba(234, 179, 8, 0.4);
+        }
+
+        /* ID Selector Examples (Unique) */
+        #main-header {
+            color: #f43f5e;
+            font-weight: bold;
+        }
+
+        #special-note {
+            background: rgba(244, 63, 94, 0.1);
+            border-left: 4px solid #f43f5e;
+            padding: 1rem;
+            border-radius: 6px;
+            margin-top: 1.5rem;
+        }
+
+        .nav-back {
+            display: inline-block;
+            margin-top: 2rem;
+            color: #38bdf8;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-back:hover {
+            color: #7dd3fc;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Understanding ID and Classes in HTML</h1>
+        
+        <div class="card">
+            <h2 id="main-header">1. ID Selector (Unique)</h2>
+            <p>An <span class="highlight">id</span> must be unique within a single HTML page. It is targeted in CSS with the <code>#</code> symbol.</p>
+        </div>
+
+        <div class="card">
+            <h2>2. Class Selector (Reusable)</h2>
+            <p>A <span class="highlight">class</span> can be reused on multiple HTML elements across the page. It is targeted in CSS with the <code>.</code> symbol.</p>
+            <div style="margin-top: 1rem; display: flex; gap: 0.5rem;">
+                <span class="badge badge-success">Class: .badge-success</span>
+                <span class="badge badge-warning">Class: .badge-warning</span>
+            </div>
+        </div>
+
+        <div id="special-note">
+            <h3>Key Difference to Remember:</h3>
+            <p>Use <strong>ID</strong> when targeting a single, unique element (like <code>#navbar</code> or <code>#submit-btn</code>). Use <strong>Class</strong> when styling multiple elements that share the same visual structure (like <code>.btn</code> or <code>.card</code>).</p>
+        </div>
+
+        <a href="../" class="nav-back">← Back to Course Directory</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "trailingSlash": true,
+  "routes": [
+    {
+      "src": "/video9/(.*)",
+      "dest": "/video9/$1"
+    },
+    {
+      "src": "/video%209/(.*)",
+      "dest": "/video%209/$1"
+    },
+    {
+      "src": "/video8/(.*)",
+      "dest": "/video8/$1"
+    },
+    {
+      "src": "/video6/(.*)",
+      "dest": "/video6/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ]
+}
